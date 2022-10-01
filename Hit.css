@@ -1,0 +1,30 @@
+body {
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table {
+    border: thin solid blue;
+    border-spacing: 0px;
+    margin: 10px 10px 10px 0px;
+    text-align: center;
+    width: 1024px;
+    height: 800px;
+    /*background: url(../images/board.jpg);
+    background-repeat: no-repeat;*/
+}
+
+td {
+    border: thin dotted;
+   
+}
+
+.addShip {
+    background: url(../images/ship.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input {
+    margin: 3px;
+}
