@@ -1,0 +1,23 @@
+.parent {
+    border: 2px black dotted;
+    display: inline-block;
+    position: relative; /*the relative property here is important for the child #two */
+}
+
+.box {
+    display: inline-block;
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+
+div#two {
+    background: green;
+    position: absolute;
+    /*absolute: element positioned relative to its nearest positioned parent */
+    /*if such parent absent, it uses the document body */
+    /*Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.*/
+    top: 10px;
+    left: 0px;
+    
+}
