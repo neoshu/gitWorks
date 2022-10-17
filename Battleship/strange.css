@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+    font-size: small;
+}
+div#board {
+    position: relative;
+    width: 1024px;
+    height: 863px;
+    margin: auto;
+    background: url(images/board.jpg) no-repeat;
+}
+
+div#messageForUser {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: rgb(83, 175, 19);
+    font-size: 2em;
+}
+
+div#count {
+    position: absolute;
+    top: 400px;
+    left: 0px;
+    color: rgb(83, 175, 19);
+    font-size: 2em;
+}
+
+form#gameStart {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+    background-color: rgb(83, 175, 19);
+}
+
+
+input {
+    background-color: rgb(210, 243, 160);
+    border-color: rgb(73, 70, 70);
+    font-size: 1.3em;
+    width: 6em;
+}
+
+table {
+    position: absolute;
+    left: 178px;
+    top: 101px;
+    border-spacing: 0px;
+}
+
+td {
+    color: antiquewhite;
+    /*border: thin dotted white;*/
+    width: 92px;
+    height: 92px;
+}
+
+.hit {
+    background: url(images/ship.png) no-repeat center;
+}
+
+.miss {
+    background: url(images/miss.png) no-repeat center;
+}
+
