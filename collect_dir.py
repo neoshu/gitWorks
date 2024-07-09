@@ -4,32 +4,26 @@
 """
 from pathlib import Path
 
-def are_all_file(path):
-    judge_list = list(path.iterdir())
-    for item in judge_list:
-        if not item.is_file():
+target_path = Path('new_dir')
+def main_collect(path=target_path):
+    folders = [] # the returned result in list form
+    def process_collect(dir):
+        if dir.is_dir() and len(list(dir.iterdir())) == 0:
+            folders.append(dir)
+        elif dir.is_file():
+            pass
+        elif analyze_path_item(dir):
+            folders.append(dir)
+        else:
+            for item in dir.iterdir():
+                process_collect(item)
+    process_collect(path)
+    return folders
+
+def analyze_path_item(path):
+    for every in path.iterdir():
+        if every.is_dir():
             return False
     return True
 
-def collect(path):
-    criteria = list(path.iterdir())
-    if len(criteria) == 0:
-        return path
-    elif are_all_file(path):
-        return path
-    else:
-        collected_dirs = []
-        for each_dir in criteria:
-            if each_dir.is_dir():
-                collected_dirs.append(collect(each_dir))
-        return collected_dirs
-
-path = Path("new_dir")
-result = collect(path)
-corrected_result = []
-for item in result:
-    if type(item) != list:
-        corrected_result.append(item)
-    else:
-        corrected_result.extend(item)
-print(corrected_result)
+print(main_collect())
